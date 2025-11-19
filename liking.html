@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interests — NOR NATASHA ADILLA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">NOR NATASHA ADILLA</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="liking.html" class="active">Interests</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="interests-section">
+    <h2>Interests</h2>
+
+    <div class="interests-grid">
+
+      <div class="interest-card">
+        <img src="music.jpg" alt="Music">
+        <h4>Music</h4>
+        <p>Loves RnB genre</p>
+      </div>
+
+      <div class="interest-card">
+        <img src="photo.jpg" alt="Photo">
+        <h4>Photography</h4>
+        <p>Learning basic photography skills</p>
+      </div>
+
+      <div class="interest-card">
+        <img src="coffee.jpg" alt="Coffee">
+        <h4>Coffee</h4>
+        <p>Coffee Addict</p>
+      </div>
+
+<div class="interest-card">
+        <img src="fren.jpg" alt="Friend">
+        <h4>Friends</h4>
+        <p>Making plans with friends</p>
+      </div>
+
+<div class="interest-card">
+        <img src="mio.jpg" alt="Meow">
+        <h4>Adopting Pets</h4>
+        <p>Taking care of stray cats</p>
+      </div>
+<div class="interest-card">
+        <img src="hike.jpg" alt="Hiking">
+        <h4>Hiking</h4>
+        <p>Enjoys extreme sport</p>
+      </div>
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+	<a href="index.html">
+   	 <i class="material-icons" style="font-size:48px;color:red;">home</i>
+     	</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects — NOR NATASHA ADILLA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="brand">NOR NATASHA ADILLA</h1>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="liking.html">Interests</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+</header>
+
+
+<main class="container page">
+
+    <h2>My Projects</h2>
+    <p class="muted">Some of my projects and contributions to UiTM Kedah!</p>
+
+    <div class="project-slideshow">
+
+        <div class="project-slide fade">
+            <img src="img1.jpg" alt="Project 1">
+            <div class="caption">College on Fire🔥</div>
+        </div>
+
+        <div class="project-slide fade">
+            <img src="img2.jpg" alt="Project 2">
+            <div class="caption">College Rollcall</div>
+        </div>
+
+        <div class="project-slide fade">
+            <img src="img3.jpg" alt="Project 3">
+            <div class="caption">Muslimah Festival@UniSHAMS</div>
+        </div>
+	 <div class="project-slide fade">
+            <img src="img4.jpg" alt="Project 4">
+            <div class="caption">HEP Care: Lunch On!</div>
+        </div>
+ <div class="project-slide fade">
+            <img src="img5.jpg" alt="Project 5">
+            <div class="caption">Kayaking</div>
+        </div>
+ <div class="project-slide fade">
+            <img src="img6.jpg" alt="Project 6">
+            <div class="caption">Murni Merchandise</div>
+        </div>
+<div class="project-slide fade">
+            <img src="img7.jpg" alt="Project 7">
+            <div class="caption">Clubfest: Into the Universe</div>
+        </div>
+
+
+        <!-- Prev & Next -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<!-- Dots -->
+        <div class="project-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+	<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+    <a href="index.html">
+        <i class="material-icons" style="font-size:48px;color:red;">home</i>
+    </a>
+</footer>
+
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+</script>
+
+<!-- Slideshow Script -->
+<script>
+let slideIndex = 1;
+let slideTimer;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    clearTimeout(slideTimer);  // stop previous timers
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    clearTimeout(slideTimer);
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("project-slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    if (dots[slideIndex - 1]) dots[slideIndex - 1].classList.add("active");
+
+    // restart the autoplay timer with fixed speed
+    slideTimer = setTimeout(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 5000); // <-- change this number if you want slower/faster slideshow
+}
+</script>
+
+
+</body>
+</html>
